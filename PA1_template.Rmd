@@ -8,7 +8,12 @@ acts<-read.csv("activity.csv")
 
 
 ## What is mean total number of steps taken per day?
-
+```{r}
+act_agg<-aggregate( steps~date, act, sum)
+hist(act_agg$steps) 
+mean(act_agg$steps)
+median(act_agg$steps)
+```
 
 
 ## What is the average daily activity pattern?
